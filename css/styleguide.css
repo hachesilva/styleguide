@@ -1,0 +1,39 @@
+/*===================================
+=            $Styleguide            =
+===================================*/
+html {
+  /* HTML style */
+}
+
+body {
+  background: whitesmoke;
+}
+
+.holder {
+	background: #fff;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 10px;
+	width: 940px;
+}
+
+.styleguide-sidebar {
+	width: 20%;
+	float: left;
+}
+
+	.widget-menu {
+		position: fixed;
+	}
+
+.styleguide-main {
+	width: 78%;
+	float: right;
+}
+
+	.styleguide-content {
+		background: #fffdea;
+		padding: 6px;
+	}
+
+/*-----  End of $Styleguide  ------*/

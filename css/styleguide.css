@@ -32,8 +32,10 @@ body {
 }
 
 	.styleguide-content {
-		background: #fffdea;
-		padding: 6px;
+		background: #FFF5F2 !important;
+		padding: 6px !important;
+		font-family: Arial, Geneva, sans-serif !important;
+		color: #D32939 !important;
 	}
 
 /*-----  End of $Styleguide  ------*/

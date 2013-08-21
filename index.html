@@ -8,34 +8,60 @@
     <title>HTML Styleguide</title>
 
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
 </head>
 
 <body class="inside page">
 
-    <div class="holder">
-        <div class="styleguide-sidebar">
-            <div class="widget-menu">
-                <div class="widget-title">Table of contents</div>
-                <div class="widget-content">
-                    <ul class="menu-vertical">
-                        <li><a href="#section-html5">HTML5 Semantic tags</a></li>
-                        <li><a href="#section-headings">Headings</a></li>
-                        <li><a href="#section-text">Regular Text</a></li>
-                        <li><a href="#section-preformated">Preformated text</a></li>
-                        <li><a href="#section-blockquotes">Blockquotes</a></li>
-                        <li><a href="#section-lists">Lists</a></li>
-                        <li><a href="#section-tables">Tables</a></li>
-                        <li><a href="#section-embeded">Embeded content</a></li>
-                        <li><a href="#section-forms">Forms</a></li>
-                        <li><a href="#section-buttons">Buttons</a></li>
-                        <li><a href="#section-other">Other</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="styleguide-main">
-            <h1 class="styleguide-content">HTML Styleguide</h1>
+	<div class="styleguide-topbar">
+    	<div class="styleguide-holder">
+    		<h1 class="styleguide-text">HTML Styleguide</h1>
+    		<form action="_SELF">
+    			<select name="section-chooser" id="section-chooser">
+    				<option value="colors">Styleguide colors</option>
+    				<option value="fonts">Styleguide fonts</option>
+    				<option value="html5">HTML5 Semantic tags</option>
+	                <option value="headings">Headings</option>
+	                <option value="text">Regular Text</option>
+	                <option value="preformated">Preformated text</option>
+	                <option value="blockquotes">Blockquotes</option>
+	                <option value="lists">Lists</option>
+	                <option value="tables">Tables</option>
+	                <option value="embeded">Embeded content</option>
+	                <option value="forms">Forms</option>
+	                <option value="buttons">Buttons</option>
+	                <option value="other">Other</option>
+    			</select>
+    		</form>
+    	</div>
+	</div>
+
+    <div class="styleguide-main">
+    	<div class="styleguide-holder">
+    		<a id="section-colors"></a>
+			<h2 class="styleguide-content">Colors</h2>
+			<div class="styleguide-color-list">
+				<figure>
+					<div class="styleguide-color color-1"></div>
+	                <figcaption>#333333</figcaption>
+	            </figure>
+				<figure>
+					<div class="styleguide-color color-2"></div>
+	                <figcaption>#666666</figcaption>
+	            </figure>
+				<figure>
+					<div class="styleguide-color color-3"></div>
+	                <figcaption>#CCCCCC</figcaption>
+	            </figure>
+			</div>
+
+			<a id="section-fonts"></a>
+			<h2 class="styleguide-content">Fonts</h2>
+			<div class="styleguide-font-list">
+                <div class="styleguide-font font-1">Arial Regular - Arial, Geneva, sans-serif</div>
+                <div class="styleguide-font font-2">Georgia Regular - Georgia, "Times New Roman", serif</div>
+			</div>
 
             <a id="section-html5"></a>
             <h2 class="styleguide-content">HTML5 Semantic tags</h2>
@@ -658,5 +684,16 @@ Subdita fert.
         </div>
     </div>
 
+	<script type="text/javascript">
+		var select = document.getElementById('section-chooser');
+		select.onchange = function() {
+			var val = select.value;
+			val = 'section-' + val;
+			console.log(val);
+			var section = document.getElementById(val);
+			section.scrollIntoView(true);
+			return false;
+		}
+	</script>
 </body>
 </html>
